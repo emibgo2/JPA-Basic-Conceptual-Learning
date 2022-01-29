@@ -3,12 +3,17 @@ package hellojpa.jpashop;
 import javax.persistence.*;
 
 @Entity
-public class Member {
+public class ShopMember {
 
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
     private Long id;
     private String name;
+
+    private String city;
+    private String street;
+    private String zipcode;
+
 
     public Long getId() {
         return id;
@@ -50,7 +55,4 @@ public class Member {
         this.zipcode = zipcode;
     }
 
-    private String city;
-    private String street;
-    private String zipcode;
 }

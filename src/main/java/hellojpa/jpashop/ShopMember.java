@@ -3,7 +3,7 @@ package hellojpa.jpashop;
 import javax.persistence.*;
 
 @Entity
-public class ShopMember {
+public class ShopMember  extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")

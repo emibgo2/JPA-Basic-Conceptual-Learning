@@ -1,5 +1,6 @@
 package hellojpa;
 
+import hellojpa.jpashop.Book;
 import hellojpa.jpashop.Order;
 import hellojpa.jpashop.OrderItem;
 
@@ -21,13 +22,11 @@ public class JpaMain {
 
         try {
 
-            Order order = new Order();
-            em.persist(order);
-            OrderItem orderItem = new OrderItem();
-            orderItem.setOrder(order);
-            em.persist(orderItem);
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("김영한");
 
-
+            em.persist(book);
             tx.commit();
         } catch (Exception e) {
             System.out.println("erro!");
